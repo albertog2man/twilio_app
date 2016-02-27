@@ -6,9 +6,11 @@ class SmsController < ApplicationController
     
     message_body = params["Body"]
     from_number = params["From"]
+    p params["From"]
+    p params["Body"]
 
     SMSLogger.log_text_message from_number, message_body
-    
+
   end
 
 end
